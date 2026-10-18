@@ -1,10 +1,15 @@
 {
   "name": "testtrial",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "LMS-TEST",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:setup": "node scripts/migrate.js",
+    "db:seed": "node scripts/seed.js",
+    "db:rest": "node scripts/migrate.js --reset && node scripts/seed.js",
+    "db:admin": "node scripts/createAdmin.js"
   },
   "keywords": [],
   "author": "",
